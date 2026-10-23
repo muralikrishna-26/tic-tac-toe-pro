@@ -1,0 +1,79 @@
+/* Design tokens: colours, spacing, type, radii, shadows and motion. */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(0.22, 0.8, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 520ms;
+  --t-focus: outline-color var(--dur-fast) var(--ease), outline-offset var(--dur-fast) var(--ease);
+
+  color-scheme: dark;
+}
+
+/* Dark charcoal (default) */
+:root,
+[data-theme='dark'] {
+  --bg: #141514;
+  --surface: #1c1e1c;
+  --surface-2: #242724;
+  --border: #323632;
+  --text: #f3efe6;
+  --text-muted: #a6a99f;
+  --accent: #34d399;
+  --accent-strong: #10b981;
+  --accent-text: #34d399;
+  --accent-soft: rgba(52, 211, 153, 0.14);
+  --accent-contrast: #08150f;
+  --danger: #f0776b;
+  --danger-soft: rgba(240, 119, 107, 0.14);
+  --mark-x: #f3efe6;
+  --mark-o: #34d399;
+  --header-bg: rgba(20, 21, 20, 0.82);
+  --overlay: rgba(6, 8, 6, 0.64);
+  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -16px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 64px -20px rgba(0, 0, 0, 0.7);
+  --shadow-accent: 0 8px 24px -10px rgba(52, 211, 153, 0.55);
+  --glow: 0 0 0 1px var(--accent), 0 10px 30px -10px rgba(52, 211, 153, 0.6);
+}
+
+/* Warm off-white */
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f5f1e8;
+  --surface: #fffdf8;
+  --surface-2: #efeadf;
+  --border: #ddd6c6;
+  --text: #1d201d;
+  --text-muted: #62665e;
+  --accent: #10a373;
+  --accent-strong: #0b8460;
+  --accent-text: #0a7a58;
+  --accent-soft: rgba(16, 163, 115, 0.12);
+  --accent-contrast: #ffffff;
+  --danger: #c4432f;
+  --danger-soft: rgba(196, 67, 47, 0.1);
+  --mark-x: #1d201d;
+  --mark-o: #0b8460;
+  --header-bg: rgba(245, 241, 232, 0.85);
+  --overlay: rgba(29, 32, 29, 0.42);
+  --shadow-md: 0 1px 2px rgba(60, 50, 30, 0.06), 0 12px 32px -18px rgba(60, 50, 30, 0.28);
+  --shadow-lg: 0 24px 64px -24px rgba(60, 50, 30, 0.45);
+  --shadow-accent: 0 8px 22px -10px rgba(16, 163, 115, 0.6);
+  --glow: 0 0 0 1px var(--accent), 0 10px 28px -10px rgba(16, 163, 115, 0.5);
+}

@@ -1,0 +1,5 @@
+/* Page-level layout. Component styles live in src/styles/components.css. */
+main {
+  display: block;
+  padding-bottom: var(--space-8);
+}

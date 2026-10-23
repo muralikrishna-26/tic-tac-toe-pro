@@ -1,0 +1,51 @@
+/* Responsive rules. Imported last so they override the base component styles. */
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: var(--space-6); }
+  .hero-art { max-width: 260px; justify-self: start; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
+  .hero-art > :nth-child(even) { translate: 0 10px; }
+  .art-tile { border-radius: var(--radius-md); }
+  .game-body { grid-template-columns: 1fr; gap: var(--space-5); }
+  .howto-grid { grid-template-columns: 1fr; }
+
+  /* Mobile navigation */
+  .menu-toggle { display: inline-grid; }
+  .nav-links {
+    position: absolute; top: calc(100% + 8px); left: 0; right: 0; flex-direction: column; align-items: stretch;
+    padding: var(--space-2); background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+    opacity: 0; visibility: hidden; transform: translateY(-8px); pointer-events: none;
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility 0s linear var(--dur);
+  }
+  .nav-links.is-open { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; transition-delay: 0s; }
+  .nav-link { min-height: 48px; font-size: 1rem; }
+}
+
+@media (max-width: 640px) {
+  .section { padding-top: var(--space-7); }
+  .hero { padding-block: var(--space-6) var(--space-3); }
+  .game-card { padding: var(--space-4); gap: var(--space-4); border-radius: var(--radius-md); }
+  .history-item { grid-template-columns: auto minmax(0, 1fr); }
+  .history-time { grid-column: 2; text-align: left; }
+  .setting-row { flex-wrap: wrap; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .nav-actions { gap: 6px; }
+  .icon-btn { width: 40px; height: 40px; }
+  .brand-name { display: none; }
+  .scoreboard { gap: var(--space-2); }
+  .player-card { padding: var(--space-3) var(--space-1); }
+  .player-mark { width: 20px; height: 20px; }
+  .player-name { font-size: 0.75rem; }
+  .player-tag { font-size: 0.625rem; letter-spacing: 0.04em; }
+  .board { gap: var(--space-2); padding: var(--space-2); border-radius: var(--radius-md); }
+  .hero-actions .btn { flex: 1 1 auto; }
+  .modal { padding: var(--space-4); }
+  .modal-actions .btn { flex: 1 1 auto; }
+}
+
+@media (min-width: 1600px) {
+  .container { width: min(100% - 4rem, 1160px); }
+}
